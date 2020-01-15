@@ -6,7 +6,8 @@
   "author": "OtavioMelo12 <otavio.souza@estudante.ufla.br>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/server.js"
   },
   "husky": {
     "hooks": {
