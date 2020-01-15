@@ -1,26 +1,12 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const routes = require('./routes');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
 
-const app = express();
+ReactDOM.render(<App />, document.getElementById('root'));
 
-mongoose.connect('mongodb+srv://mapuser:mapuser@cluster0-p9zi7.mongodb.net/mapdevs?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
-
-mongoose.set('useCreateIndex', true);
-
-app.use(express.json());
-app.use(routes);
-
-app.listen(3333);
-
-// Métodos HTTP: GET, POST, PUT, DELETE
-
-// Tipos de Parâmetros:
-// Query Params: req.query (filtros, ordenacao, paginacao, ...)
-// Route Params: req.params (identificar um recurso na alteracao ou remocao)
-// Body Params: req.body (dados para criacao ou alteracao de um registro)
-
-// MongoDB (nao-relacional)
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();

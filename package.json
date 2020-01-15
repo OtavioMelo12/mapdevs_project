@@ -1,18 +1,41 @@
 {
-  "name": "mapdevs_project",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/OtavioMelo12/mapdevs_project.git",
-  "author": "OtavioMelo12 <otavio.souza@estudante.ufla.br>",
-  "license": "MIT",
-  "scripts": {
-    "dev": "nodemon src/index.js"
-  },
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
@@ -20,22 +43,15 @@
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "husky": "^4.0.6",
-    "nodemon": "^2.0.2"
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^1.7.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "axios": "^0.19.1",
-    "express": "^4.17.1",
-    "mongoose": "^5.8.7"
   }
 }
