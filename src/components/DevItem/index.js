@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import './styles.css';
@@ -12,7 +13,7 @@ function DevItem({ dev }) {
           <span>{dev.techs.join(', ')}</span>
         </div>
       </header>
-      <p>dev.bio</p>
+      <p>{dev.bio}</p>
       <a href={`https://github.com/${dev.github_username}`}>Acessar perfil do Github</a>
     </li>
   );

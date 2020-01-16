@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable no-underscore-dangle */
 // componente: um bloco isolado de html, css e js
 // propriedade: informacoes que um componente pai passa para o componente filho
 // estado: informacoes mantidas pelo componente
@@ -19,7 +21,7 @@ function App() {
 
   useEffect(() => {
     async function loadDevs() {
-      const response = api.get('/devs');
+      const response = await api.get('/devs');
 
       setDevs(response.data);
     }
